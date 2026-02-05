@@ -42,7 +42,7 @@ Return only JSON structured as:
       max_tokens: 800,
     });
 
-    return NextResponse.json({ result: message.content[0].text });
+    return NextResponse.json({ result: message.content });
   } catch (err) {
     console.error(err);
     return NextResponse.json({ error: "AI request failed" }, { status: 500 });
